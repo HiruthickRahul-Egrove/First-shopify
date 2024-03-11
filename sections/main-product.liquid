@@ -69,6 +69,11 @@
   <h5>{{ product.available }}</h5>
   <h1>{{ product.selected_or_first_available_variant.inventory_quantity }}</h1>
   <h2>{{ product.id }}</h2>
+  <h3>{%- if product.created_at == 2024 -%} }}
+    <div class="the product is not created at 2024">
+    <span>{{ 'products.product.volume_pricing.note' | t }}</span>
+    </div>
+    {%- endif -%}{{ product.created_at }}</h3>
   <div class="page-width">
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
