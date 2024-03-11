@@ -73,8 +73,15 @@
     </div>
     {%- endif -%}{{ product.created_at }}</h3>
 
+  {% for varient in product.variants %}
+    <img src="{{ variant.images | image_url: '50x50' }}">
+    {% endfor %}
+
   <h5>{{ product.price | money_with_currency }}</h5>
  {{ product.options }} 
+  <img src="{{ product.featured_image | image_url: '16x16' }}">
+
+
 {% for variant in product.variantsnts %}
 {% for option in variant.options %}
 {{ option }}
