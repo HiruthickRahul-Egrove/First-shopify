@@ -72,10 +72,10 @@
     <span>{{ 'products.product.volume_pricing.note' | t }}</span>
     </div>
     {%- endif -%}{{ product.created_at }}</h3>
-
+<!-- 
   {% for varient in product.variants %}
     <img src="{{ variant.images | image_url: '50x50' }}">
-    {% endfor %}
+    {% endfor %} -->
 
   <h5>{{ product.price | money_with_currency }}</h5>
  {{ product.options }} 
