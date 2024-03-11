@@ -10,9 +10,8 @@
   <h5>{{ product.price | money_with_currency }}</h5>
  {{ product.options }} 
 {% for varient in product.varients %}
- 
 {% for option in varient.options %}
-  {{ option }}
+{{ option }}
   
   
 {% endfor %}
