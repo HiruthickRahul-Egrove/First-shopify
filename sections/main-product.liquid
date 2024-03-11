@@ -8,3 +8,12 @@
     {%- endif -%}{{ product.created_at }}</h3>
 
   <h5>{{ product.price | money_with_currency }}</h5>
+
+{% for varient in product.varients %}
+  {{ product.options }} 
+{% for option in varient.options %}
+  {{ option }}
+  
+  
+{% endfor %}
+{% endfor %}
