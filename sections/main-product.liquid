@@ -64,28 +64,6 @@
       onload="this.media='all'"
     >
   {%- endif -%}
-    <h5>{{ product.available }}</h5>
-  <h1>{{ product.selected_or_first_available_variant.inventory_quantity }}</h1>
-  <h2>{{ product.id }}</h2>
-  <h3>{%- if product.created_at == 2024 -%} }}
-    <div class="the product is not created at 2024">
-    <span>{{ 'products.product.volume_pricing.note' | t }}</span>
-    </div>
-    {%- endif -%}{{ product.created_at }}</h3>
-
-<h5>{{ product.price | money_with_currency }}</h5>
-{{ product.options }} 
-  <img src="{{ product.featured_image | image_url: '50 X 50' }}">
-
-
-{% for variant in product.variantsnts %}
-  <img src="{{ variant.image.src | image_url: '50 X 50' }}">
-{% for option in variant.options %}
-{{ option }}
-  
-  
-{% endfor %}
-{% endfor %}
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
   <div class="page-width">
