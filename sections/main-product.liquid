@@ -75,11 +75,11 @@
 
 <h5>{{ product.price | money_with_currency }}</h5>
 {{ product.options }} 
-  <img src="{{ product.featured_image | image_url: '100 X 100' }}">
+  <img src="{{ product.featured_image | image_url: '50 X 50' }}">
 
 
 {% for variant in product.variantsnts %}
-  <img src="{{ variant.image.src | image_url: '100 X 100' }}">
+  <img src="{{ variant.image.src | image_url: '50 X 50' }}">
 {% for option in variant.options %}
 {{ option }}
   
